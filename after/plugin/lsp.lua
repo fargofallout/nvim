@@ -14,8 +14,8 @@ lsp_zero.on_attach(function(client, bufnr)
     end
 
     -- nmap("<leader>py", function() require("telescope.builtin").lsp_workspace_symbols({frame_width = 60}) end, "[P]roject [S]ymbols")
-    nmap("<leader>ps", require("telescope.builtin").lsp_workspace_symbols, "[P]roject S[y]mbols")
-    nmap("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument S[y]mbols")
+    nmap("<leader>py", require("telescope.builtin").lsp_workspace_symbols, "[P]roject S[y]mbols")
+    nmap("<leader>dy", require("telescope.builtin").lsp_document_symbols, "[D]ocument S[y]mbols")
 
     -- nmap("<leader>K", require("telescope.builtin").hover, "[K]elp")
 

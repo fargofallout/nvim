@@ -116,6 +116,7 @@ G - go to bottom of file
 gg - go to top
 a number + G - go to that line in the file
 a number + ENTER - go that many lines forward
+number + h, j, k, or l - move that lines or characters
 + - move down a line to first non-space character
 - - move up a line to first non-space character
 ) - move forward one sentence
