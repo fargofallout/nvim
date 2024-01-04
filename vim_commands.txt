@@ -11,12 +11,12 @@ custom keybinds from installed packages
 
 <leader>a - add file to harpoon
 <leader>s - open harpoon menu
-<C-j> - navigate to harpoon 1
-<C-k> - navigate to harpoon 2
-<C-l> - navigate to harpoon 3
-<C-;> - navigate to harpoon 4
-<C-a> - previous harpoon file
-<C-s> - next harpoon file
+<a-a> - navigate to harpoon 1
+<a-s> - navigate to harpoon 2
+<a-d> - navigate to harpoon 3
+<a-f> - navigate to harpoon 4
+<C-d> - previous harpoon file
+<C-f> - next harpoon file
 
 gd - goto definition of the function under cursor
 gr - lists all references of function under cursor
