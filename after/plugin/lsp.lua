@@ -23,7 +23,7 @@ end)
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-    ensure_installed = {"jedi_language_server"},
+    ensure_installed = {"jedi_language_server", "html"},
     handlers = {
         lsp_zero.defaultsetup,
         jedi_language_server = function()
@@ -34,6 +34,7 @@ require("mason-lspconfig").setup({
     },
 })
 
+require("lspconfig").html.setup{}
 
 local cmp = require("cmp")
 cmp.setup({
