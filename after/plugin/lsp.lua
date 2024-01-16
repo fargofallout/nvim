@@ -34,7 +34,9 @@ require("mason-lspconfig").setup({
     },
 })
 
-require("lspconfig").html.setup{}
+require("lspconfig").html.setup{
+    filetypes = {"html", "htmldjango"},
+}
 
 local cmp = require("cmp")
 cmp.setup({
