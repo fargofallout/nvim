@@ -38,3 +38,13 @@ ctrl b + [ - enter scroll(?) mode - lets you move up and down the terminal to se
 
 tmux ls - list active tmux sessions (at terminal, not while tmux is running)
 tmux attach-session -t # - attach to session number #
+
+
+sqlite
+sqlite3 [filename] - open file
+.tables - get table names from file
+.show - various stats
+.indexes - show indexes
+.quit - exit
+***note*** - when doing a query, end it with a semicolon, such as: select * from users;
+

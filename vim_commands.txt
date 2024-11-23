@@ -95,6 +95,7 @@ visual mode:
 v - enter visual mode, where you can select text
 V - enter visual mode and select entire row (useful for selecting multiple rows)
 : - after selecting text, enter command(?) mode, and then do something like w filename to write selected text to a file
+""p - with text selected in visual mode, replace that text with what's in the " register (which should be the text most recently added to registers, but I need to read more about them)
 i" or i' - select to closing " or ', without including the " or '
 a" or a' - same as above, but include " or '
 
