@@ -46,5 +46,7 @@ sqlite3 [filename] - open file
 .show - various stats
 .indexes - show indexes
 .quit - exit
+.fullschema - get schema of all tables
+SELECT name FROM PRAGMA_TABLE_INFO('table name'); - get just column names from table
 ***note*** - when doing a query, end it with a semicolon, such as: select * from users;
 

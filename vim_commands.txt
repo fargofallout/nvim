@@ -40,13 +40,17 @@ gD - goto declaration - not really a python thing
 
 
 <leader>pv - neovim project view
+<ALT-j> - next item in quickfix menu
+<ALT-k> - prev item in quickfix menu
+<C-q> - while telescope window is open, move it to quickfix (works with grep, find files, even open buffers window)
+:cdo - while in quickfix window, can do a substitution (e.g., :sdo s/find_word/replace_word/gc)
 
 while using lsp and suggestion box is open:
 <Up> - abort
 <Down> - confirm
 <Right> - next item
 <Left> - previous item
-<C-a> - open completion window
+<C-a> - open completion window? can't really get this to work
 
 <leader>b - set command for running python file (or anything) and if it's already set, run it and output to split window
 <leader>nb - re-set command for running python file, but don't run it (maybe I should change that part?)
@@ -148,6 +152,10 @@ b - backward one word
 $ - end of line
 ^ - go to first non-space character in line
 0 - go to beginning of line
+f[char] - move forward to next instance of [char]
+F[char] - move backward to previous instance of [char]
+; - repeat f motion going forward
+, - repeat f motion going backwards
 % - go to matching (, {, or [
 CTRL+g - show current location 
 G - go to bottom of file
@@ -162,6 +170,9 @@ number + h, j, k, or l - move that lines or characters
 :ju - show jump list (for use with CTRL+O and CTRL+I and other things I don't understand yet)
 [m or ]m - go to previous/next start of method
 [M or ]M - to to previous/next end of method
+****** better version of above?
+]] or [[ - jumps between beginning of top-level functions
+][ or [] - jumps between ends of top-level items functions
 * - next instance of current word
 
 
@@ -174,6 +185,8 @@ CTRL+o - naviate to previous cursor positions (probably not solely after having 
 CTRL+i - navigate forward in cursor positions
 \c - at end of search, ignores case
 :noh - clear highlighting from last search
+
+n - repeat last / or ? search (must have executed search)
 
 :s - substitute first instance of a word with another - :s/whatever/hey would substitute 'hey' for 'whatever' (but only for the current line)
   - appending /g to end makes the command global for that line
