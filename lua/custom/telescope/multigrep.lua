@@ -29,6 +29,11 @@ return function(opts)
             table.insert(args, pieces[2])
         end
 
+        if pieces[3] then
+            table.insert(args, "-g")
+            table.insert(args, pieces[3])
+        end
+
         return vim.tbl_flatten {
             args,
             { "--color=never", "--no-heading", "--with-filename", "--line-number", "--column", "--smart-case" },

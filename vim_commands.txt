@@ -3,7 +3,7 @@ telescope commands
 <leader>sk - search keymaps
 <leader>sf - find files in project (search files)
 <leader>ss - search telescope (shows telescope commands)
-<leader>sg - search in projects (search grep)
+<leader>sg - search in projects (search grep) - see note below
 <leader>sd - search diagnostics (shows error messages in the telesope popup window, for instance)
 <leader>sr - search resume (restores previous search window)
 <leader>s. - search old files (shows recent files)
@@ -14,7 +14,10 @@ telescope commands
 <leader>st - search treesitter (seems to show all symbols in treesitter?)
 <leader>se - search registers
 
-<leader>pg - grep across project (project grep) **** not currently implemented, because it seems redundant ***
+grep note:
+entering two spaces after the search allows for glob syntax, which I'm not that good at - can include/exclude directories or filetypes
+e.g., print  !venv  *.py - searches for print in python files that aren't in the venv directory
+it's currently configured to only allow two spaces once or twice
 
 lsp commands
 gd - goto definition of the function under cursor
