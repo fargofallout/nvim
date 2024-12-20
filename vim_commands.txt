@@ -10,9 +10,12 @@ telescope commands
 <leader><leader> - list buffers
 <leader>/ - fuzzy search current buffer in a smaller window
 <leader>s/ - search only open buffers
-<leader>sn - search neovim config
 <leader>st - search treesitter (seems to show all symbols in treesitter?)
 <leader>se - search registers
+<leader>sw - search project for word under cursor
+<leader>sn - search neovim config
+<leader>si - search installed neovim files (search source of telescope, for instance)
+<leader>sc - same as above, but grep
 
 grep note:
 entering two spaces after the search allows for glob syntax, which I'm not that good at - can include/exclude directories or filetypes

@@ -64,6 +64,7 @@ return {
                 settings = { diagnostics = { enable = true }}
             },
             html = {},
+            lua_ls = {},
         }
 
         require("mason").setup()

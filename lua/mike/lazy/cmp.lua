@@ -34,7 +34,7 @@ return {
                 ["<Left>"] = cmp.mapping.select_prev_item(),
                 ["<Down>"] = cmp.mapping.confirm { select = true },
                 ["<Up>"] = cmp.mapping.abort(),
-                -- ["<C-a>"] = cmp.mapping.complete() {} -- not 100% sure what this does and I don't think I need it
+                ["<C-e>"] = cmp.mapping.complete(),
             },
             sources = {
                 { name = "nvim_lsp" },

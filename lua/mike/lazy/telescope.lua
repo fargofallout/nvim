@@ -72,5 +72,19 @@ return {
             builtin.find_files { cwd = vim.fn.stdpath "config" }
         end, { desc = "[S]earch [N]eovim config" })
 
+        -- search files installed in neovim data folder?
+        vim.keymap.set("n", "<leader>si", function()
+            require("telescope.builtin").find_files {
+                cwd = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy")
+            }
+        end, { desc = "[S]earch [I]nstalled config files" })
+
+        -- grep in installed neovim data files
+        vim.keymap.set("n", "<leader>sc", function()
+            require("telescope.builtin").live_grep {
+                cwd = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy")
+            }
+        end, { desc = "[S]earch (grep) in installed [C]onfig files" })
+
     end,
 }
