@@ -34,16 +34,6 @@ gi - goto implementation (not really a python thing?)
 K - open information about word under cursor (hover menu)
 gD - goto declaration - not really a python thing
 
--- harpoon is not currently implemented, and I'm not sure it needs to be with these new keymaps - we'll see
-<leader>a - add file to harpoon
-<leader>s - open harpoon menu
-<a-a> - navigate to harpoon 1
-<a-s> - navigate to harpoon 2
-<a-d> - navigate to harpoon 3
-<a-f> - navigate to harpoon 4
-<C-d> - previous harpoon file
-<C-f> - next harpoon file
-
 
 <leader>pv - neovim project view
 <ALT-j> - next item in quickfix menu
@@ -180,7 +170,9 @@ number + h, j, k, or l - move that lines or characters
 ]] or [[ - jumps between beginning of top-level functions
 ][ or [] - jumps between ends of top-level items functions
 * - next instance of current word
-
+} or { - move to next whitespace down or up
+[c - while context is active (in a long function and it's showing the top line of it), move to that line
+****note: considering making ]} and [{ move to the end of functions, rather than having to do ]M or [M (although now that I type those, they aren't that bad)
 
 searching:
 / - search for something
@@ -222,6 +214,18 @@ CTRL+^ - switch to another buffer - buffer to switch to is indicated with a # wh
 :bd - close the current buffer
 :b [TAB] - switch between buffers
 :buffers - list open buffers
+
+-- harpoon is not currently implemented, and I'm not sure it needs to be with these new keymaps - we'll see
+<leader>a - add file to harpoon
+<leader>s - open harpoon menu
+<a-a> - navigate to harpoon 1
+<a-s> - navigate to harpoon 2
+<a-d> - navigate to harpoon 3
+<a-f> - navigate to harpoon 4
+<C-d> - previous harpoon file
+<C-f> - next harpoon file
+
+
 
 a line with whatever in it
 
