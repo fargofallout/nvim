@@ -60,9 +60,26 @@ return {
                     gopls = {usePlaceholders = true,},
                 },
             },
-            jedi_language_server = {
-                settings = { diagnostics = { enable = true }}
+            -- jedi_language_server = {
+            --     settings = { diagnostics = { enable = true }}
+            -- },
+            pylsp = {
+                settings = {
+                    pylsp = {
+                        plugins = {
+                            pycodestyle = {ignore = {"E501", "F541"}},
+                            -- pyflakes = {enabled = false}
+                        }
+                    }
+                }
             },
+            -- pyright = {
+            --     settings = {
+            --         python = {
+            --             -- analysis = {  diagnosticSeverityOverrides = { reportLineTooLong = "none" }}
+            --         }
+            --     }
+            -- },
             html = {},
             lua_ls = {},
         }
