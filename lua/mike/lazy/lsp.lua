@@ -63,6 +63,13 @@ return {
             -- jedi_language_server = {
             --     settings = { diagnostics = { enable = true }}
             -- },
+            -- urls for some formatting rules:
+            --
+            -- flake 8 formatting codes
+            -- https://github.com/PyCQA/flake8/blob/main/docs/source/user/error-codes.rst
+            -- 
+            -- pylsp config data:
+            -- https://github.com/python-lsp/python-lsp-server/blob/develop/CONFIGURATION.md
             pylsp = {
                 settings = {
                     pylsp = {

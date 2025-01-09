@@ -20,3 +20,39 @@ vim.keymap.set("n", "<M-k>", "<cmd>cprev<CR>")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- local insert_char = function()
+--     local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+--     vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, {"()"})
+--     vim.api.nvim_win_set_cursor(0, {row, col + 1})
+-- end
+-- vim.keymap.set("i", "(", insert_char())
+
+-- add closing quote or bracket or whatever when an opening one is typed
+-- I'm sure there's a way to make this work in one function rather than four, but eh
+vim.keymap.set("i", "(", function()
+    local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+    vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, {"()"})
+    vim.api.nvim_win_set_cursor(0, {row, col + 1})
+    end
+)
+
+vim.keymap.set("i", "[", function()
+    local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+    vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, {"[]"})
+    vim.api.nvim_win_set_cursor(0, {row, col + 1})
+    end
+)
+
+vim.keymap.set("i", "{", function()
+    local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+    vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, {"{}"})
+    vim.api.nvim_win_set_cursor(0, {row, col + 1})
+    end
+)
+
+vim.keymap.set("i", "\"", function()
+    local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+    vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, {"\"\""})
+    vim.api.nvim_win_set_cursor(0, {row, col + 1})
+    end
+)
