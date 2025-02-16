@@ -27,9 +27,6 @@ return {
                 -- this was originally gI rather than gi - not sure why, but noting it here in case it becomes important
                 map("gi", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
 
-                -- jump to type of word under cursor (e.g., if the var is a string, go to definition of a string?k)
-                map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
-
                 -- fuzzily find symbols in buffer
                 map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ympols")
 
@@ -43,6 +40,9 @@ return {
 
                 -- pop documentation on word under cursor
                 map("K", vim.lsp.buf.hover, "Hover Documentation")
+
+                -- jump to type of word under cursor (e.g., if the var is a string, go to definition of a string?k)
+                map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
 
                 -- goto declaration (probably more of a C/C++ thing where there are header files)
                 map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")

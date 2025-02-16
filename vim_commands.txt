@@ -26,12 +26,12 @@ lsp commands
 gd - goto definition of the function under cursor
 gr - lists all references of function under cursor
 gi - goto implementation (not really a python thing?)
-<leader>D - jump to place where type of word under cursor is defined (if pressed on a string, will jump to string definition, for instance)
 <leader>ds - search document symbols
 <leader>ws - search workpsace symbols (uses lsp_dynamic_workspace_symbols) - note: this has the problem where it needs setup.py to figure out what a project is
 <leader>rn - rename word under cursor
 <leader>ca - code action (not sure when this is available in python)
 K - open information about word under cursor (hover menu)
+leader>D - jump to place where type of word under cursor is defined (if pressed on a string, will jump to string definition, for instance)
 gD - goto declaration - not really a python thing
 
 
@@ -61,6 +61,14 @@ gcO - same as above, but to line above
 gcA - put comment at end of line and enter insert mode
 gc [visual mode] - comment selected line(s)
 -- in general, comments follow vim standards for movement, although they may not be supported by the language
+
+surround
+ysaw( - surround word with parentheses and a space, so word becomes ( word )
+ysaw) - surround word with parentheses but no space, so word becomes (word)
+ysi") - put parentheses inside of surrounding quotes, so "this is a sentence" becomes "(this is a sentence)"
+ysa]} - put angle brackets around surrounding square brackets, so [why is this in brackets?] becomes {[why is this in brackets?]}
+yst") - surround text up until quote with parentheses - not sure how useful that is, but t and f work the same way with this as with other motions
+S" - **in visual mode**, surround selected text with quotes
 
 netrw mode
 % - new file
