@@ -49,6 +49,8 @@ return {
         vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
         vim.keymap.set("n", "<leader>st", builtin.treesitter, { desc = "[S]earch [T]reesitter" })
         vim.keymap.set("n", "<leader>se", builtin.registers, { desc = "[S]earch R[E]gisters" })
+        vim.keymap.set("n", "<leader>sj", builtin.jumplist, { desc = "[S]earch [J]umplist"})
+        vim.keymap.set("n", "<leader>sm", builtin.marks, { desc = "[S]earch [M]arks"})
         -- vim.keymap.set("n", "<leader>/", builtin.current_buffer_fuzzy_find, { desc = "[/] fuzzy search" }) --I do like having this, but below is a function to do it in a smaller window
 
         -- search current buffer in small window

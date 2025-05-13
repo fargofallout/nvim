@@ -1,4 +1,4 @@
-telescope commands
+elescope commands
 <leader>sh - search help
 <leader>sk - search keymaps
 <leader>sf - find files in project (search files)
@@ -16,6 +16,8 @@ telescope commands
 <leader>sn - search neovim config
 <leader>si - search installed neovim files (search source of telescope, for instance)
 <leader>sc - same as above, but grep
+<leader>sm - search marks
+<leader>sj - search jumplist
 
 grep note:
 entering two spaces after the search allows for glob syntax, which I'm not that good at - can include/exclude directories or filetypes
@@ -115,6 +117,7 @@ p - put copied text here
 	p puts it below the cursor
 	P puts it above the cursor
 "[letter]p - put from lettered register
+"0p - the zero register will always have the last thing yanked rather than things that are deleted
 rx - replace character under cursor with x (or whatever character)
 R - enter insert mode and replace characters as you type
 o - insert a blank line below the current line and go into insert mode
@@ -129,6 +132,7 @@ Mf{char} - motion to char to the right, including char
 MF{char} - motion to char to the left, including char
 Mt{char} - motion 'til char to the right (does not include char)
 MT{char} - motion 'til char to the left
+CTRL+< or > - increatse or decrease width of window (see :help ctrl-w for other Window commands)
 
 :w filename - write file to new file named filename
 :r filename - read contents of a file and place them at the cursor
@@ -206,6 +210,7 @@ n - repeat last / or ? search (must have executed search)
 	l - perform current substitution and quit (last?)
 	CTRL+E - move down the page (works outside of search context)
 	CTRL+Y - move up the page (works outside of search)
+: - while in visual mode, enters replace mode for just the selected text(?) - this creates the command below
 
 :'<,>s/\v%V - not sure what that first part does (happens automatically when in visual mode), but this searches just text selected via visual mode and treats all characters as special other than letters and whatnot (so no need to escape them)
 
